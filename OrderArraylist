@@ -1,0 +1,15 @@
+public ArrayList<Integer> orderedArray(InputArray inuptArr)
+	{
+		ArrayList<Integer> orderedList = new ArrayList<Integer>();
+		ArrayList<Integer> orgArraylist= inuptArr.getInputArr();
+	
+		for (Integer arrayInt : orgArraylist) {
+			if(arrayInt == 0)
+			{
+				orderedList.add(arrayInt);
+				orgArraylist.remove(arrayInt);
+			}
+		}
+		orderedList.addAll(orgArraylist);
+		return orderedList;
+	}
